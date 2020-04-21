@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6153173136580472257
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3668979869619067255, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 35d40dfe20b64b2449004c71f0e84603, type: 2}
+    - target: {fileID: 3668979869619067257, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3091838973357795975, guid: 35fbe974a6cbcdc4cb080b5a9f5a94e8,
+        type: 3}
+    - target: {fileID: 3668979869619067257, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: pclass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: energyLoss
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: productivityLoss
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: socialLoss
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: minisprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 3710656417214892535, guid: bf2ac8d159df41045ad8e0e7ef444443,
+        type: 3}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: minisprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 980093688315531042, guid: bf2ac8d159df41045ad8e0e7ef444443,
+        type: 3}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: head
+      value: 
+      objectReference: {fileID: -8036438131603791335, guid: 80398f90382c5ce4baccbae3698cbc34,
+        type: 3}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: energy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108004, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: productivity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108007, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668979871111108008, guid: 9b4f3f680d18507418725e36a1ec61ea,
+        type: 3}
+      propertyPath: m_Name
+      value: Innkeeper Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9b4f3f680d18507418725e36a1ec61ea, type: 3}
