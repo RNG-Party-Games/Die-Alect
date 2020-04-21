@@ -218,8 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPeople: 0
-  people:
-  - {fileID: 8104359313606519829}
+  person: {fileID: 8104359313606519829}
 --- !u!95 &6141543546965393703
 Animator:
   serializedVersion: 3

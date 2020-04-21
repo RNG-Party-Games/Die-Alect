@@ -61,25 +61,26 @@ public class AI : AIPath
                 goal = AIGoal.Death;
                 destination = GameInformation.instance.GetDock();
             }
-            else if (innamt > 0 && p.GetEnergy() < 0.33) {
+            else if (innamt > 0 && p.GetEnergy() < 0.6) {
                 goal = AIGoal.Inn;
                 destination = GameInformation.instance.GetEntrances(0);
             }
-            else if (shopamt > 0 && p.GetFood() < 0.33) {
+            else if (shopamt > 0 && p.GetFood() < 0.6) {
                 goal = AIGoal.Shop;
                 destination = GameInformation.instance.GetEntrances(2);
             }
-            else if (smithyamt > 0 && p.GetProductivity() < 0.33) {
+            else if (smithyamt > 0 && p.GetProductivity() < 0.6) {
                 goal = AIGoal.Smithy;
                 destination = GameInformation.instance.GetEntrances(1);
             }
-            else if (apt1amt + apt2amt > 0 && p.GetSocial() < 0.33) {
-                goal = AIGoal.Apartment1;
+            else if (apt1amt + apt2amt > 0 && p.GetSocial() < 0.6) {
                 float decisionIndex = Random.Range(0.0f, 1.0f);
                 if ((apt1amt > 0 && apt2amt > 0 && decisionIndex < 0.5f) || (apt1amt > 0)) {
+                    goal = AIGoal.Apartment1;
                     destination = GameInformation.instance.GetEntrances(3);
                 }
                 else {
+                    goal = AIGoal.Apartment2;
                     destination = GameInformation.instance.GetEntrances(4);
                 }
             }

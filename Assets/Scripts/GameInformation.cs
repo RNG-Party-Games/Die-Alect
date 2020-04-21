@@ -13,7 +13,7 @@ public class GameInformation : MonoBehaviour
     public AstarPath astar;
     public Collider2D world, walkable, placeable, boatarea;
     public int personPlane = -5;
-    public int day;
+    int day = 1;
     public TextMeshProUGUI dayText;
     public GameObject battlescene;
     public List<string> phrases, innphrases, smithyphrases, shopphrases, socialphrases, news;
@@ -40,7 +40,7 @@ public class GameInformation : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start() {
-        dayText.text = "0";
+        dayText.text = day+"";
         ShowNews("Arrenjeese is dying! Place citizens into buildings to start getting interactions! Interactions give valuable language proficiency.");
     }
 
@@ -120,7 +120,7 @@ public class GameInformation : MonoBehaviour
     }
 
     public Person GetRandomPerson(AI.AIGoal goal) {
-        BuildingPopup building;
+        BuildingPopup building = buildings[0].GetPopup();
         if (goal == AI.AIGoal.Inn) {
             building = buildings[0].GetPopup();
         }
@@ -133,18 +133,17 @@ public class GameInformation : MonoBehaviour
         else if (goal == AI.AIGoal.Apartment1) {
             building = buildings[3].GetPopup();
         }
-        else {
+        else if(goal == AI.AIGoal.Apartment2) {
             building = buildings[4].GetPopup();
+            Debug.Log(buildings[4].name);
         }
-        List<Person> potentialPeople = building.GetPeople();
+        Person potentialPerson = building.GetPerson();
+        //Debug.Log(building.gameObject.GetInstanceID());
         //if(potentialPeople.Count > 0) {
         //    int index = Random.Range(0, potentialPeople.Count);
         //    return potentialPeople[index];
         //}
-        if (potentialPeople.Count > 0) {
-            return building.GetPeople()[0];
-        }
-        return null;
+        return potentialPerson;
     }
 
     public int GetAmountOfPeopleIn(AI.AIGoal goal) {
@@ -164,8 +163,10 @@ public class GameInformation : MonoBehaviour
         else {
             building = buildings[4].GetPopup();
         }
-        List<Person> potentialPeople = building.GetPeople();
-        return potentialPeople.Count;
+        if (building.GetPerson() != null) {
+            return 1;
+        }
+        return 0;
     }
 
     public void Spawn(Person.PersonClass pclass, Vector3 v, float prof) {

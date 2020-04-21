@@ -100,22 +100,27 @@ public class Person : MonoBehaviour
     }
 
     public void Interact(AI.AIGoal goal) {
-        Debug.Log(gameObject.name + " " + goal + " " + ai.destination);
-        emotion.Play("Exclamation");
-        if(goal == AI.AIGoal.Inn) {
-            energy = 1.0f;
-        }
-        else if (goal == AI.AIGoal.Shop) {
-            food = 1.0f;
-        }
-        if (goal == AI.AIGoal.Smithy) {
-            productivity = 1.0f;
-        }
-        else if (goal == AI.AIGoal.Shop) {
-            food = 1.0f;
-        }
         Person interactwith = GameInformation.instance.GetRandomPerson(goal);
-        GameInformation.instance.StartBattle(this, interactwith, goal);
+        Debug.Log("Interacting with " + interactwith.name);
+        if(interactwith != null) {
+            emotion.Play("Exclamation");
+            if (goal == AI.AIGoal.Inn) {
+                energy = 1.0f;
+            }
+            else if (goal == AI.AIGoal.Shop) {
+                food = 1.0f;
+            }
+            if (goal == AI.AIGoal.Smithy) {
+                productivity = 1.0f;
+            }
+            else if (goal == AI.AIGoal.Apartment1) {
+                social = 1.0f;
+            }
+            else if (goal == AI.AIGoal.Apartment2) {
+                social = 1.0f;
+            }
+            GameInformation.instance.StartBattle(this, interactwith, goal);
+        }
     }
 
     public void OnMouseEnter() {
@@ -148,7 +153,7 @@ public class Person : MonoBehaviour
 
     public void Drop() {
         PopupPerson popup = GameInformation.instance.GetHoveringPopup();
-        if (popup != null) {
+        if (popup != null && popup.GetPerson() == null) {
             popup.SetPerson(this);
             Deactivate();
         }
@@ -161,7 +166,6 @@ public class Person : MonoBehaviour
             }
             transform.position = newposition;
         }
-        Debug.Log(Time.time - startedDragging);
         if(Time.time - startedDragging > 2) {
             ai.maxSpeed = originalSpeed * 2;
         }

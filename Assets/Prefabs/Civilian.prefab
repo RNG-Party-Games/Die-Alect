@@ -365,7 +365,7 @@ MonoBehaviour:
   energyLoss: 0.05
   productivityLoss: 0.05
   socialLoss: 0.01
-  profLoss: 0.02
+  profLoss: 0.01
   timeBorn: 0
 --- !u!61 &3668979871111108005
 BoxCollider2D:

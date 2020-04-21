@@ -39,6 +39,8 @@ public class PopupPerson : MonoBehaviour
     }
 
     public Person GetPerson() {
+        if(p != null)
+        Debug.Log("returning " + p.name);
         return p;
     }
 
